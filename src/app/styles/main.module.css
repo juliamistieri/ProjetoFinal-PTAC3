@@ -1,3 +1,17 @@
+@keyframes change-background-color {
+  0% { background-color: #FADBD8; } /* Rosa claro */
+  10% { background-color: #F9E79F; } /* Amarelo pastel */
+  20% { background-color: #D5DBDB; } /* Cinza claro */
+  30% { background-color: #AED6F1; } /* Azul claro */
+  40% { background-color: #F5B7B1; } /* Vermelho pastel */
+  50% { background-color: #ABEBC6; } /* Verde menta */
+  60% { background-color: #F0B27A; } /* Laranja pastel */
+  70% { background-color: #D7BDE2; } /* Lilás claro */
+  80% { background-color: #A9DFBF; } /* Verde claro */
+  90% { background-color: #BB8FCE; } /* Roxo pastel */
+  100% { background-color: #FADBD8; } /* Rosa claro */
+}
+
 .main {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -9,35 +23,48 @@
   flex-wrap: wrap;
   gap: 50px;
   color: black;
-  background-color: rgb(235, 235, 235);
+  background-color: #FADBD8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: change-background-color 20s infinite;
 }
 
 .card {
   display: flex;
-  width: 300px;
-  height: 425px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 350px; /* Aumentado de 300px para 350px */
+  height: auto; /* Ajustado para auto para crescer com o conteúdo */
   background-color: white;
   border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(171, 109, 233);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgb(144, 0, 255);
 }
 
 .propriedades {
-    margin: 5px;
+  margin: 5px 0;
+  text-align: center;
 }
 
 .ultimaProp {
-    margin: 5px;
-    margin-bottom: 10px;
+  margin: 5px 0 10px;
+  text-align: center;
 }
 
 .titulo {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .img {
-    border-radius: 5px;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
 }

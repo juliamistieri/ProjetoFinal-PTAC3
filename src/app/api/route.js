@@ -6,7 +6,7 @@ export const listaDeFilmes = [
         titulo: "A Bela e a Fera",
         duracao: "2h 09min",
         anoLancamento: 2017,
-        generos: "Fantasia, Comédia Musical, Romance",
+        generos: ["Fantasia, ", "Comédia Musical, ", "Romance"],
         linkImg: "https://cinemacomrapadura.com.br/imagens/2017/01/20170108-a-bela-e-a-fera-615x879.jpg"
     },
     {
@@ -14,7 +14,7 @@ export const listaDeFilmes = [
         titulo: "Enrolados",
         duracao: "1h 41min",
         anoLancamento: 2010,
-        generos: "Animação, Família",
+        generos: ["Animação, ", "Família, "],
         linkImg: "https://static.wikia.nocookie.net/dublagem/images/5/5c/Enrolados.jpeg/revision/latest?cb=20230719135756&path-prefix=pt-br"
     },
     {
@@ -22,7 +22,7 @@ export const listaDeFilmes = [
         titulo: "Divertida Mente 2",
         duracao: "1h 36min",
         anoLancamento: 2024,
-        generos: "Aventura, Animação, Comédia, Família",
+        generos: ["Aventura, ", "Animação, ", "Comédia, ", "Família"],
         linkImg: "https://ingresso-a.akamaihd.net/prd/img/movie/divertida-mente-2/61ac248d-e3e6-4e33-9515-8ce0621a32fa.webp"
     },
     {
@@ -30,7 +30,7 @@ export const listaDeFilmes = [
         titulo: "Como Treinar o seu Dragão",
         duracao: "1h 33min",
         anoLancamento: 2010,
-        generos: "Aventura, Animação, Família",
+        generos: ["Aventura, ", "Animação, ", "Família"],
         linkImg: "https://m.media-amazon.com/images/I/91W6Z2eBKWL._AC_UF1000,1000_QL80_.jpg"
     },
     {
@@ -38,7 +38,7 @@ export const listaDeFilmes = [
         titulo: "Kung Fu Panda 3",
         duracao: "1h 35min",
         anoLancamento: 2016,
-        generos: "Aventura, Animação, Família, Artes Marciais",
+        generos: ["Aventura, ", "Animação, ", "Família, ", "Artes Marciais"],
         linkImg: "https://br.web.img3.acsta.net/pictures/16/02/14/13/01/233818.jpg"
     }
 ];

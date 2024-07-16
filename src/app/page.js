@@ -23,17 +23,17 @@ export default function Home() {
     <main className={styles.main}>
       {listaFilmes.map((filme) => (
         <div className={styles.card} key={filme.id}>
-          {/* <div className={styles.titulo}>{filme.titulo.slice(0, 40)}...</div> */}
+          {<div className={styles.titulo}>{filme.titulo.slice(0, 40)}...</div>}
 
           <Image className={styles.img} width={300} height={400} src={filme.linkImg} />
 
-          {/* <div className={styles.propriedades}>{filme.categoria}</div>
+          {<div className={styles.propriedades}>{filme.categoria}</div>}
 
-          <div className={styles.propriedades}>{filme.anoLancamento}</div>
+          {<div className={styles.propriedades}><strong>Ano de Lançamento:</strong> {filme.anoLancamento}</div>}
 
-          <div className={styles.propriedades}>{filme.duracao}</div>
+          {<div className={styles.propriedades}><strong>Duração:</strong> {filme.duracao}</div>}
 
-          <div className={styles.ultimaProp}>{filme.generos.slice(0, 40)}...</div> */}
+          {<div className={styles.ultimaProp}><strong>Gêneros:</strong> {filme.generos.slice(0, 40)}...</div>}
 
           <Link href={'/api/' + filme.id}>
             <button>Ver Mais</button>
