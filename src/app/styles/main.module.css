@@ -1,15 +1,37 @@
 @keyframes change-background-color {
-  0% { background-color: #FADBD8; } /* Rosa claro */
-  10% { background-color: #F9E79F; } /* Amarelo pastel */
-  20% { background-color: #D5DBDB; } /* Cinza claro */
-  30% { background-color: #AED6F1; } /* Azul claro */
-  40% { background-color: #F5B7B1; } /* Vermelho pastel */
-  50% { background-color: #ABEBC6; } /* Verde menta */
-  60% { background-color: #F0B27A; } /* Laranja pastel */
-  70% { background-color: #D7BDE2; } /* Lilás claro */
-  80% { background-color: #A9DFBF; } /* Verde claro */
-  90% { background-color: #BB8FCE; } /* Roxo pastel */
-  100% { background-color: #FADBD8; } /* Rosa claro */
+  0% {
+    background-color: #ffb4ad;
+  } /* Rosa claro */
+  10% {
+    background-color: #f0d56b;
+  } /* Amarelo pastel */
+  20% {
+    background-color: #b2f5f5;
+  } /* Cinza claro */
+  30% {
+    background-color: #a0cfee;
+  } /* Azul claro */
+  40% {
+    background-color: #ffada5;
+  } /* Vermelho pastel */
+  50% {
+    background-color: #95f5bd;
+  } /* Verde menta */
+  60% {
+    background-color: #ffba7e;
+  } /* Laranja pastel */
+  70% {
+    background-color: #de92ff;
+  } /* Lilás claro */
+  80% {
+    background-color: #a1ffc7;
+  } /* Verde claro */
+  90% {
+    background-color: #d778ff;
+  } /* Roxo pastel */
+  100% {
+    background-color: #ff9e96;
+  } /* Rosa claro */
 }
 
 .main {
@@ -23,7 +45,7 @@
   flex-wrap: wrap;
   gap: 50px;
   color: black;
-  background-color: #FADBD8;
+  background-color: #fadbd8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   animation: change-background-color 20s infinite;
 }
@@ -38,13 +60,13 @@
   background-color: white;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 0 10px rgb(171, 109, 233);
+  box-shadow: 0 0 10px rgb(80, 80, 80);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgb(144, 0, 255);
+  box-shadow: 0 0 30px rgb(80, 80, 80);
 }
 
 .propriedades {
@@ -68,3 +90,34 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Carregamento */
+.loader {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* Fim do carregamento */

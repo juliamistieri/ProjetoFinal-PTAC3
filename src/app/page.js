@@ -19,6 +19,10 @@ export default function Home() {
     getFilmes();
   }, []);
 
+  if (listaCompleta[0] == false) {
+    return <div className={styles.main}><div className={styles.loader}></div></div>;
+  }
+
   return (
     <main className={styles.main}>
       {listaFilmes.map((filme) => (
