@@ -12,7 +12,7 @@ export default function Home() {
   const [listaCompleta, setListaCompleta] = useState([]);
 
   useEffect(() => {
-    const getFilmes = () => {
+    const getFilmes = () => { 
       setListaFilmes(listaDeFilmes);
       setListaCompleta(listaDeFilmes);
     }
