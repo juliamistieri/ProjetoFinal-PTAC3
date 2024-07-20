@@ -5,25 +5,35 @@ import { listaDeFilmes } from "./api/route";
 import { useState, useEffect } from "react"
 import styles from "./styles/main.module.css";
 import Roleta from "./Roleta";
+import ErroGetFetch from "./ErroGetFetch";
 
 export default function Home() {
 
   const [listaFilmes, setListaFilmes] = useState([]);
   const [listaCompleta, setListaCompleta] = useState([]);
+  const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
-    const getFilmes = () => { 
-      setListaFilmes(listaDeFilmes);
-      setListaCompleta(listaDeFilmes);
-    }
+    useEffect(() => {
+      const getFilmes = async() => {
+        try{
+          //const id = await fetch('/api/filmes');
+          //const objeto = await id.json();
+          setListaFilmes(listaFilmes);
+          setListaCompleta(listaCompleta);
+        }
+        catch{
+          setIsError(true);
+        }
+        }
     getFilmes();
   }, []);
 
-  if (listaCompleta[0] == false) {
-    return <div className={styles.main}><div className={styles.loader}></div></div>;
+  
+  if (isError == true){
+    return <ErroGetFetch/>
   }
 
-  if( listaFilmes[0] == null){
+  if (listaCompleta[0] == null){
     return <Roleta/>
    }
 
