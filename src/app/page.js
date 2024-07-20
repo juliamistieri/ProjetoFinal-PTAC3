@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import styles from "./styles/main.module.css";
 import Roleta from "./Roleta";
 import ErroGetFetch from "./ErroGetFetch";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -16,10 +17,10 @@ export default function Home() {
     useEffect(() => {
       const getFilmes = async() => {
         try{
-          //const id = await fetch('/api/filmes');
-          //const objeto = await id.json();
-          setListaFilmes(listaFilmes);
-          setListaCompleta(listaCompleta);
+          const objeto = await fetch('/api/filmes');
+          const data = await objeto.json();
+          setListaFilmes(data);
+          setListaCompleta(data);
         }
         catch{
           setIsError(true);
@@ -52,6 +53,10 @@ export default function Home() {
           {<div className={styles.propriedades}><strong>Duração:</strong> {filme.duracao}</div>}
 
           {<div className={styles.ultimaProp}><strong>Gêneros:</strong> {filme.generos.slice(0, 40)}...</div>}
+
+          <Link href={'/api/' + filme.id}>
+          <button>Ver mais</button>
+          </Link>
 
         </div>
       ))}
