@@ -1,10 +1,10 @@
 'use client'
 import Image from "next/image";
 import "./styles.css";
-import Link from "next/link";
 import { listaDeFilmes } from "./api/route";
 import { useState, useEffect } from "react"
 import styles from "./styles/main.module.css";
+import Roleta from "./Roleta";
 
 export default function Home() {
 
@@ -23,6 +23,10 @@ export default function Home() {
     return <div className={styles.main}><div className={styles.loader}></div></div>;
   }
 
+  if( listaFilmes[0] == null){
+    return <Roleta/>
+   }
+
   return (
     <main className={styles.main}>
       {listaFilmes.map((filme) => (
@@ -39,9 +43,6 @@ export default function Home() {
 
           {<div className={styles.ultimaProp}><strong>Gêneros:</strong> {filme.generos.slice(0, 40)}...</div>}
 
-          <Link href={'/api/' + filme.id}>
-            <button>Ver Mais</button>
-          </Link>
         </div>
       ))}
     </main>
