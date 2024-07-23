@@ -17,7 +17,7 @@ export default function Home() {
     useEffect(() => {
       const getFilmes = async() => {
         try{
-          const objeto = await fetch('/api/filmes');
+          const objeto = await fetch('http://localhost:3000/api');
           const data = await objeto.json();
           setListaFilmes(data);
           setListaCompleta(data);
@@ -54,7 +54,7 @@ export default function Home() {
 
           {<div className={styles.ultimaProp}><strong>Gêneros:</strong> {filme.generos.slice(0, 40)}...</div>}
 
-          <Link href={'/api/' + filme.id}>
+          <Link href={'/filmes/' + filme.id}>
           <button>Ver mais</button>
           </Link>
 
