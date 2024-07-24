@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import "./styles.css";
-import { listaDeFilmes } from "./api/route";
 import { useState, useEffect } from "react"
 import styles from "./styles/main.module.css";
 import Roleta from "./Roleta";
@@ -55,7 +54,7 @@ export default function Home() {
           {<div className={styles.ultimaProp}><strong>Gêneros:</strong> {filme.generos.slice(0, 40)}...</div>}
 
           <Link href={'/filmes/' + filme.id}>
-          <button>Ver mais</button>
+          <button className={styles.button}>Ver mais</button>
           </Link>
 
         </div>

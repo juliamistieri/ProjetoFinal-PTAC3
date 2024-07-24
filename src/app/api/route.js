@@ -14,7 +14,7 @@ export const listaDeFilmes = [
         titulo: "Enrolados",
         duracao: "1h 41min",
         anoLancamento: 2010,
-        generos: ["Animação, ", "Família, "],
+        generos: ["Animação, ", "Família"],
         linkImg: "https://static.wikia.nocookie.net/dublagem/images/5/5c/Enrolados.jpeg/revision/latest?cb=20230719135756&path-prefix=pt-br"
     },
     {
